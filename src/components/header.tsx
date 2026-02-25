@@ -19,7 +19,7 @@ const header: React.FC<HeaderProps> = ({ cart, onRemove,Search, SetSearch,clearC
     <div className="App">
         <header className="App-header">
             <button className='logo backgroundnil' ><img className='topbarbuttons' src={logo}/></button>
-            <h1 className='App-title'>Clone Flip</h1>
+            <h1 className='App-title'>🪙Clone Flip</h1>
             <Searchbox search={Search} setSearch={SetSearch} />
             <CartButton items={cart} onRemove={onRemove} clearCart={clearCart}/>
         </header>
