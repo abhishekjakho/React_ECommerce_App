@@ -1,0 +1,245 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+ */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  background: transparent;
+  border: none;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App{
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  margin: 0;
+  position: sticky;
+  top:0;
+}
+
+.App-header{
+  display: flex;
+}
+
+.search-box{
+    width: 65%;
+    height: 40px;
+    margin-left: 16px;
+    align-self: center;
+    border-radius: 25px;
+}
+
+.search-btn{
+    height: 30px;
+    align-self: center;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.margin-1{
+  margin: 1px;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb)
+  /* To give special background */
+}
+
+.topbarbuttons{
+  margin: 7px;
+  width: 50px;
+  border-radius: 34px;
+}
+
+.limitwidth{
+  width: 25px;
+}
+
+.margin-left{
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.backgroundnil{
+  background: transparent;
+  border: none;
+}
+
+.inline{
+  display: inline;
+}
+
+/* Categories CSS */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.grid-container-products{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 3px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 9px;
+  text-align: center;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.grid-item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.topdeal{
+    text-align: center;
+    height: 48px;
+    font-size: 35px;
+    background: #3ab4ac;
+    background: linear-gradient(90deg, rgba(58, 180, 172, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba
+    #fcb045(252, 176, 69, 1) 100%);
+    color: white;
+    margin: 8px;
+}
+
+.mar-0{
+  margin: 0;
+}
+
+.smallimg{
+  width : 100px;
+}
+
+.grid-item.active {
+  border: 2px solid #1976d2;   /* blue highlight */
+  background-color: #e3f2fd;   /* light blue background */
+  border-radius: 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 12px;
+  gap: 10px;
+}
+
+.addremovebtn{
+    display: flex;
+    background-color: lightgrey;
+    border-radius: 20px;
+}
+
+.pad-8{
+  padding-top: 8px;
+}
+
+.pad-20{
+  padding-top: 20px;
+}
+
+.colorwhite{
+  color: white;
+}
+
+/* Dialog paper (via slotProps or global override) */
+.MuiDialog-paper {
+  border-radius: 14px !important;
+}
+
+/* Cart list */
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  border-radius: 12px;
+}
+.cart-item:hover { background: color-mix(in oklab, CanvasText 8%, transparent); }
+
+.cart-thumb {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--mui-palette-divider, #e5e7eb);
+}
+.cart-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cart-name { font-weight: 600; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cart-meta { color: #6b7280; font-size: 0.9rem; }
+
+.cart-price { font-weight: 700; min-width: 72px; text-align: right; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cart-item {
+    grid-template-columns: 72px 1fr auto;
+    grid-template-areas:
+      "img info remove"
+      "img price price";
+    gap: 12px;
+  }
+  .cart-thumb { grid-area: img; width: 72px; height: 72px; }
+  .cart-info { grid-area: info; }
+  .cart-price { grid-area: price; text-align: right; }
+  .cart-remove { grid-area: remove; justify-self: end; }
+}
